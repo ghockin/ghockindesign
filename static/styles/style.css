@@ -10,4 +10,5 @@ body {
 h1 {
   margin-top: 20px; /* optional spacing from top */
   text-align: center;
+  color:red;
 }
