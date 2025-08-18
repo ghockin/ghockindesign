@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align to top */
+}
+
+h1 {
+  margin-top: 20px; /* optional spacing from top */
+  text-align: center;
+  color: black;
+}
