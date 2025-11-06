@@ -1,4 +1,4 @@
-/* General */
+/* General styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -72,24 +72,34 @@ nav ul li a:hover {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive */
+/* Responsive: mobile sidebar */
 @media (max-width: 600px) {
   .hamburger {
     display: flex;
+    z-index: 2100;
   }
+
   nav ul {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: #333;
+    position: fixed;
+    top: 0;
+    right: -100%; /* start off-screen */
+    width: 80vw;   /* sidebar width */
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
     flex-direction: column;
-    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: right 0.3s ease;
+    z-index: 2000;
   }
+
   nav ul.show {
-    display: flex;
+    right: 0; /* slide in */
   }
-  nav ul li {
+
+  nav ul li a {
+    font-size: 1.5rem;
     padding: 10px 20px;
   }
 }
