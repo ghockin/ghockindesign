@@ -1,4 +1,5 @@
-const postFile = '/ghockindesign/posts/my-first-post.md';
+// Path relative to index.html
+const postFile = 'posts/my-first-post.md';
 
 fetch(postFile)
   .then(res => {
