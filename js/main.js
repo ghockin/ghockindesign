@@ -31,7 +31,7 @@ hamburger.addEventListener("click", toggleMenu);
 
 // Brand click → homepage
 brand.addEventListener("click", () => {
-  window.location.href = window.location.origin;
+  window.location.href = window.location.origin + window.location.pathname.split("/")[1] + "/index.html";
 });
 
 // Load Markdown
