@@ -1,4 +1,4 @@
-const postFile = 'posts/my-first-post.md';
+const postFile = '/ghockindesign/posts/my-first-post.md';
 
 fetch(postFile)
   .then(res => {
