@@ -1,3 +1,4 @@
+// List of Markdown posts
 const posts = [
   { title: "My First Post", file: "posts/my-first-post.md" },
   { title: "Another Post", file: "posts/another-post.md" }
@@ -5,7 +6,7 @@ const posts = [
 
 const navLinks = document.getElementById("nav-links");
 
-// Populate navbar
+// Populate navbar links dynamically
 posts.forEach(post => {
   const li = document.createElement("li");
   const a = document.createElement("a");
@@ -14,15 +15,16 @@ posts.forEach(post => {
   a.addEventListener("click", (e) => {
     e.preventDefault();
     loadPost(post.file);
-    if (window.innerWidth <= 600) toggleMenu(); // close menu on mobile
+    if (window.innerWidth <= 600) toggleMenu(); // close mobile menu
   });
   li.appendChild(a);
   navLinks.appendChild(li);
 });
 
-// Toggle mobile menu
+// Toggle hamburger menu
 function toggleMenu() {
   navLinks.classList.toggle("show");
+  document.querySelector(".hamburger").classList.toggle("active");
 }
 
 // Load Markdown post
@@ -36,4 +38,9 @@ function loadPost(file) {
       document.getElementById("post-content").innerHTML = "<p>Failed to load post.</p>";
       console.error(err);
     });
+}
+
+// Redirect to homepage
+function goHome() {
+  window.location.href = window.location.origin;
 }
