@@ -1,4 +1,4 @@
-const postFile = './posts/my-first-post.md';
+const postFile = 'posts/my-first-post.md';
 
 fetch(postFile)
   .then(res => {
@@ -11,4 +11,5 @@ fetch(postFile)
   })
   .catch(err => {
     document.getElementById('post').innerHTML = `<p style="color:red;">Error loading post: ${err}</p>`;
+    console.error(err);
   });
