@@ -31,7 +31,7 @@ hamburger.addEventListener("click", toggleMenu);
 
 // Brand click → homepage
 brand.addEventListener("click", () => {
-  window.location.href = window.location.origin + window.location.pathname.split("/")[1] + "/index.html";
+  window.location.href = "https://username.github.io/repo-name/index.html"
 });
 
 // Load Markdown
