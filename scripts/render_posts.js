@@ -1,5 +1,5 @@
 // Choose which post to show (you could make this dynamic later)
-const postFile = 'posts/my-first-post.md';
+const postFile = './posts/my-first-post.md';
 
 fetch(postFile)
   .then(res => res.text())
