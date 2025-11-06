@@ -8,7 +8,7 @@ main {
   padding: 20px;
 }
 
-/* Navbar styles */
+/* Navbar */
 nav {
   position: sticky;
   top: 0;
@@ -45,7 +45,7 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Hamburger icon */
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -74,7 +74,7 @@ nav ul li a:hover {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive styles */
+/* Responsive */
 @media (max-width: 600px) {
   .hamburger {
     display: flex;

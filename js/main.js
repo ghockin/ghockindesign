@@ -5,6 +5,8 @@ const posts = [
 ];
 
 const navLinks = document.getElementById("nav-links");
+const hamburger = document.querySelector(".hamburger");
+const brand = document.querySelector(".brand");
 
 // Populate navbar links dynamically
 posts.forEach(post => {
@@ -15,7 +17,7 @@ posts.forEach(post => {
   a.addEventListener("click", (e) => {
     e.preventDefault();
     loadPost(post.file);
-    if (window.innerWidth <= 600) toggleMenu(); // close mobile menu
+    if (window.innerWidth <= 600) toggleMenu(); // close menu on mobile
   });
   li.appendChild(a);
   navLinks.appendChild(li);
@@ -24,8 +26,15 @@ posts.forEach(post => {
 // Toggle hamburger menu
 function toggleMenu() {
   navLinks.classList.toggle("show");
-  document.querySelector(".hamburger").classList.toggle("active");
+  hamburger.classList.toggle("active");
 }
+
+hamburger.addEventListener("click", toggleMenu);
+
+// Redirect to homepage when brand clicked
+brand.addEventListener("click", () => {
+  window.location.href = window.location.origin;
+});
 
 // Load Markdown post
 function loadPost(file) {
@@ -38,9 +47,4 @@ function loadPost(file) {
       document.getElementById("post-content").innerHTML = "<p>Failed to load post.</p>";
       console.error(err);
     });
-}
-
-// Redirect to homepage
-function goHome() {
-  window.location.href = window.location.origin;
 }
