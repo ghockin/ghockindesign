@@ -3,19 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghockin Design</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <title>My Markdown Blog</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Ghockin Design</h1>
-  <div id="post"></div>
 
-  <!-- Marked.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<nav>
+  <div class="brand">My Blog</div>
+  <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+  <ul id="nav-links">
+    <!-- JS will populate links dynamically -->
+  </ul>
+</nav>
 
-  <!-- Your script -->
-  <script src="scripts/render_posts.js"></script>
+<main id="post-content">
+  <h2>Welcome!</h2>
+  <p>Select a post from the navbar to read.</p>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>
