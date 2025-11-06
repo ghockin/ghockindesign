@@ -1,4 +1,3 @@
-// List of Markdown posts
 const posts = [
   { title: "My First Post", file: "posts/my-first-post.md" },
   { title: "Another Post", file: "posts/another-post.md" }
@@ -8,7 +7,7 @@ const navLinks = document.getElementById("nav-links");
 const hamburger = document.querySelector(".hamburger");
 const brand = document.querySelector(".brand");
 
-// Populate navbar links dynamically
+// Populate navbar
 posts.forEach(post => {
   const li = document.createElement("li");
   const a = document.createElement("a");
@@ -17,26 +16,25 @@ posts.forEach(post => {
   a.addEventListener("click", (e) => {
     e.preventDefault();
     loadPost(post.file);
-    if (window.innerWidth <= 600) toggleMenu(); // close menu on mobile
+    if (window.innerWidth <= 600) toggleMenu();
   });
   li.appendChild(a);
   navLinks.appendChild(li);
 });
 
-// Toggle hamburger menu
+// Hamburger toggle
 function toggleMenu() {
   navLinks.classList.toggle("show");
   hamburger.classList.toggle("active");
 }
-
 hamburger.addEventListener("click", toggleMenu);
 
-// Redirect to homepage when brand clicked
+// Brand click → homepage
 brand.addEventListener("click", () => {
   window.location.href = window.location.origin;
 });
 
-// Load Markdown post
+// Load Markdown
 function loadPost(file) {
   fetch(file)
     .then(res => res.text())
