@@ -1,7 +1,5 @@
 # My First Blog Post
 
-Welcome to my blog! This is written in Markdown.
+Welcome to my blog!
 
-- It’s easy to read
-- Easy to write
-- And we’ll convert it to HTML automatically!
+- Welcome to my blog! Have a flick through some of my posts and see if anything catches your eye. I’m constantly working on many projects, all of which are different, so hopefully you’ll find something interesting.
