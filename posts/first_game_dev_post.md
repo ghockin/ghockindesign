@@ -2,6 +2,8 @@
 
 2D game begins
 
+- Link to repo: https://github.com/ghockin/2d_Game
+
 - I haven’t made games for nearly two years now, as I grew bored of it.
 
 - However, I’ve had the itch to develop again.
