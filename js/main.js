@@ -1,6 +1,6 @@
 const posts = [
-  { title: "My First Post", file: "posts/my-first-post.md" },
-  { title: "Another Post", file: "posts/first_game_dev_post.md" }
+  { title: "Welcome", file: "posts/my-first-post.md" },
+  { title: "Game-Dev-Blog", file: "posts/first_game_dev_post.md" }
 ];
 
 const navLinks = document.getElementById("nav-links");
